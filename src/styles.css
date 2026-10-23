@@ -2,7 +2,7 @@
 
 :root{font-family:'DM Sans',sans-serif;color:#3e2434;background:#5c263e;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;font-optical-sizing:auto;font-weight:400}
 *{box-sizing:border-box}body{margin:0;min-width:320px}button,input,a{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}
-.page-shell{position:relative;isolation:isolate;min-height:100vh;overflow:hidden;background:#5b293e url('/photo1.jpg') center 34%/cover fixed no-repeat;padding:0 24px 30px}
+.page-shell{position:relative;isolation:isolate;min-height:100vh;overflow:hidden;background:#5b293e url('/miia.jpg') center 34%/cover fixed no-repeat;padding:0 24px 30px}
 .photo-overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(36,13,28,.3),rgba(65,20,43,.4) 34%,rgba(247,225,226,.6) 68%,rgba(249,233,228,.7) 100%)}
 .topbar{max-width:1180px;margin:auto;height:76px;display:flex;align-items:center;gap:12px;color:#fff;letter-spacing:.17em;font-size:10px;font-weight:700}
 .brand-mark{width:36px;height:36px;display:grid;place-items:center;border:1px solid #ffffff78;border-radius:13px;background:#ffffff1c;backdrop-filter:blur(12px)}.topbar-heart{margin-left:auto;color:#ffd6dc}
