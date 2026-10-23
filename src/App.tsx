@@ -95,7 +95,7 @@ function App() {
 
       <section className="hero">
         <div className="eyebrow"><Sparkles size={15} /> МАЛЕНЬКИЕ РАДОСТИ</div>
-        <h1>Подарки с <em>любовью</em></h1>
+        <h1>Подарки для <em>Мии</em></h1>
         <div className="hero-pill"><span className="pulse-dot" /> {gifts.filter(g => statusOf(g.id) === 'available').length} подарков ждут своих друзей</div>
       </section>
 
