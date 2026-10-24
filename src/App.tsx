@@ -44,27 +44,40 @@ function App() {
   const statusOf = (giftId: string) => statuses[giftId]?.status ?? 'available';
 
   async function bookGift() {
-    if (!selected) return;
+    console.log('--- Нажата кнопка бронирования ---');
+    if (!selected) {
+      console.log('Ошибка: подарок не выбран');
+      return;
+    }
     const cleanName = name.trim();
+    console.log('Имя для брони:', cleanName);
     if (cleanName.length < 2 || cleanName.length > 40) {
+      console.log('Ошибка: некорректное имя');
       setError('Укажите имя длиной от 2 до 40 символов.');
       return;
     }
     if (!supabaseConfigured) {
+      console.log('Ошибка: Supabase не настроен (supabaseConfigured = false)');
       setError('Бронирование ещё не подключено. Для общей работы нужна настройка Supabase.');
       return;
     }
     setBusy(true); setError('');
+    console.log('Отправка запроса в Supabase...');
     try {
       const result = await reserveGift(selected.id, cleanName);
+      console.log('Успешный ответ от базы:', result);
       localStorage.setItem(`${TOKEN_PREFIX}${selected.id}`, result.token);
       setNotice(`Подарок «${selected.name}» забронирован. Код восстановления сохранён в этом браузере.`);
       setSelected(null); setName('');
       await refresh();
     } catch (e) {
+      console.error('Ошибка при выполнении reserveGift:', e);
       setError(e instanceof Error ? e.message : 'Не удалось забронировать подарок.');
       await refresh();
-    } finally { setBusy(false); }
+    } finally {
+      setBusy(false);
+      console.log('Завершение процесса бронирования');
+    }
   }
 
   async function manageGift(action: 'cancel_gift' | 'mark_purchased', gift: Gift) {
