@@ -50,7 +50,7 @@ export const gifts: Gift[] = [
   },
   {
     id: 'creative-garden',
-    name: 'Набор для творчества "Собери свой сад"',
+    name: 'Детский трёхколесный велосипед с ручкой Junion Belli',
     description: 'Творческий набор с Яндекс Маркета',
     url: 'https://market.yandex.ru/cc/BNTQAA',
     image: 'https://cdn-icons-png.flaticon.com/512/4213/4213958.png',
