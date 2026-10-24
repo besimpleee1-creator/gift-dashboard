@@ -48,4 +48,12 @@ export const gifts: Gift[] = [
     image: '/gifts/mat.svg',
     accent: 'blue',
   },
+  {
+    id: 'creative-garden',
+    name: 'Набор для творчества "Собери свой сад"',
+    description: 'Творческий набор с Яндекс Маркета',
+    url: 'https://market.yandex.ru/cc/BNTQAA',
+    image: 'https://cdn-icons-png.flaticon.com/512/4213/4213958.png',
+    accent: 'lilac',
+  },
 ];
